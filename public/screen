@@ -1,0 +1,278 @@
+html {
+    height: 100%;
+    max-height: 100%;
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    height: 100%;
+    max-height: 96%;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+      Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+    font-size: 1.6em;
+    line-height: 1.8;
+    color: #000;
+    background-color: #fff;
+}
+
+a {
+    color: inherit;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+
+}
+
+a:hover {
+    color: #ccc;
+}
+
+#site-head {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0rem;
+    text-align: center;
+    color: #fff;
+    background-color: #fff;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+/****** Top toggle Menu ******/
+
+.top-toggle-menu {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 99;
+}
+
+.top-toggle-menu span {
+    padding:0 5px 0 0;
+}
+
+#menu-toggle {
+  width: 28px;
+  height: 30px;
+  margin: 30px 10px 30px 30px;
+  float: left;
+  z-index: 10;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#menu-toggle div {
+  width: 100%;
+  height: 5px;
+  background: #333;
+  margin: 4px auto;  
+  backface-visibility: hidden;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+
+}
+
+#menu-toggle.open .one {
+    -webkit-transform: rotate(45deg) translate(5px, 5px);
+    -moz-transform: rotate(45deg) translate(5px, 5px);
+    -o-transform: rotate(45deg) translate(5px, 5px);
+    -ms-transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(5px, 5px);
+
+}
+
+#menu-toggle.open .two {
+  opacity: 0;
+}
+
+#menu-toggle.open .three {
+    -webkit-transform: rotate(-45deg) translate(7px, -8px);
+    -moz-transform: rotate(-45deg) translate(7px, -8px);
+    -o-transform: rotate(-45deg) translate(7px, -8px);
+    -ms-transform: rotate(-45deg) translate(7px, -8px);
+    transform: rotate(-45deg) translate(7px, -8px);
+
+}
+
+
+#top-menu {  
+  color: #fff;
+  margin: 20px 0 0 70px;
+  z-index: 10;
+  display: none;
+  
+}
+
+#top-menu ul {
+    margin: -1px auto ;
+    padding: 0;
+}
+
+#top-menu ul li {
+    float: left;
+    list-style-type: none;
+    margin: 0 auto;
+    background: rgba(0,0,0, .75);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+#top-menu ul li a {
+    padding: 10px 20px;
+    display: block;
+}
+
+#top-menu ul li a:hover {
+    background: rgba(0,0,0, .25);
+}
+
+#top-menu a {
+    text-decoration: none;
+}
+
+#copyright {
+    color: #333;
+    position: fixed;
+    bottom: 0;
+    margin: 30px 10px 30px 20px;
+    cursor: pointer;
+    cursor: hand;
+}
+
+#copyright-nco {
+    color: #333;
+    position: fixed;
+    bottom: 4px;
+    margin: 30px 10px 33px 60px;
+    font-size: large;
+}
+
+.inner {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+#logotype {
+content: url('data:image/svg+xml;base64,PHN2ZyBpZD0i44Os44Kk44Ok44O8XzEiIGRhdGEtbmFtZT0i44Os44Kk44Ok44O8IDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDEzNDMuNjIgMTUwMCI+PHRpdGxlPuODreOCtOOCv+OCpOODlzwvdGl0bGU+PHBvbHlnb24gcG9pbnRzPSIxMjQ2LjIxIDk3LjgzIDEyNDYuMjEgMTI0Ni4yMiA5MDMuNzQgNzU4LjI2IDkwMy43NCA5Ny44MyAxMjQ2LjIxIDk3LjgzIi8+PHBvbHlnb24gcG9pbnRzPSI5MDMuNzQgNzU4LjI2IDkwMy43NCAxMjQ2LjIyIDQ0MC4yOSA1ODUuNzkgNDQwLjI5IDk3LjgzIDkwMy43NCA3NTguMjYiLz48cG9seWdvbiBwb2ludHM9IjQ0MC4yOSA1ODUuNzkgNDQwLjI5IDEyNDYuMjIgOTcuODIgMTI0Ni4yMiA5Ny44MiA5Ny44MyA0NDAuMjkgNTg1Ljc5Ii8+PHBvbHlnb24gcG9pbnRzPSIxNjAuMzQgMTQwMS44NSAxMTMuMjkgMTM0NS41MSAxMTMuMjkgMTQwMC4zNiA5Ny44IDE0MDAuMzYgOTcuOCAxMzA3LjExIDEwMS4yNyAxMzA3LjExIDE0OC4xOCAxMzYyLjY0IDE0OC4xOCAxMzA4LjYgMTYzLjI3IDEzMDguNiAxNjMuMjcgMTQwMS44NSAxNjAuMzQgMTQwMS44NSIvPjxwYXRoIGQ9Ik0yNjUuODgsMTQwMi41NGMtMjYuMzgsMC00Ny0yMS4yNi00Ny00OC40LDAtMTEuOTQsNC45NS0yNC4xNCwxMy41Ny0zMy40NSw4LjM0LTksMjEuMDUtMTQuNCwzNC0xNC40YTQ4LjMxLDQ4LjMxLDAsMCwxLDQ4LjM5LDQ4LjEyLDQ5LjQ0LDQ5LjQ0LDAsMCwxLTE1LjQ4LDM1LjIzQzI5MC40OSwxMzk4LjA4LDI3OC45MiwxNDAyLjU0LDI2NS44OCwxNDAyLjU0Wm0uOTUtODEuM2MtMTcuNjgsMC0zMS41NCwxNC41Ny0zMS41NCwzMy4xNywwLDEwLjc1LDMuNDgsMTksMTAuNjUsMjUuMjNhMzEuODYsMzEuODYsMCwwLDAsMjAuNzYsNy45NWMxOCwwLDMxLjUzLTE0LjE1LDMxLjUzLTMyLjkxUzI4NC40NCwxMzIxLjI0LDI2Ni44MywxMzIxLjI0WiIvPjxyZWN0IHg9IjM3My4yNSIgeT0iMTMwOC44OCIgd2lkdGg9IjE1LjIyIiBoZWlnaHQ9IjkxLjQ3Ii8+PHBvbHlnb24gcG9pbnRzPSI0NjIuNTcgMTQwMC4zNiA0OTEuNTcgMTMyMy4yOCA0NjYuMyAxMzIzLjI4IDQ2OS43MiAxMzA5LjE1IDUxMy40OCAxMzA4LjczIDQ4My45NCAxMzg2LjA5IDUxMS4zIDEzODYuMDkgNTExLjMgMTQwMC4zNiA0NjIuNTcgMTQwMC4zNiIvPjxwb2x5Z29uIHBvaW50cz0iNTg3LjU3IDE0MDAuMzYgNTg3LjU3IDEzNjMuODYgNTgxLjg1IDEzNjMuODYgNTgxLjg1IDEzNDkuNzMgNTg3LjU3IDEzNDkuNzMgNTg3LjU3IDEzMDguODggNjIzLjgzIDEzMDguODggNjI2LjgzIDEzMjMuNDIgNjAzLjA2IDEzMjMuNDIgNjAzLjA2IDEzNDkuODYgNjI4Ljk0IDEzNDkuODYgNjI4Ljk0IDEzNjMuODYgNjAzLjA2IDEzNjMuODYgNjAzLjA2IDEzODYuMDkgNjI2Ljc2IDEzODYuMDkgNjI2Ljc2IDE0MDAuMzYgNTg3LjU3IDE0MDAuMzYiLz48cG9seWdvbiBwb2ludHM9Ijc1OS4wMyAxNDAxLjg1IDcxMS45OSAxMzQ1LjUxIDcxMS45OSAxNDAwLjM2IDY5Ni41IDE0MDAuMzYgNjk2LjUgMTMwNy4xMSA2OTkuOTcgMTMwNy4xMSA3NDYuODggMTM2Mi42NCA3NDYuODggMTMwOC42IDc2MS45NyAxMzA4LjYgNzYxLjk3IDE0MDEuODUgNzU5LjAzIDE0MDEuODUiLz48cG9seWdvbiBwb2ludHM9IjgzMS45OCAxNDAwLjM2IDgzMS45OCAxMzYzLjg2IDgyNi4yNSAxMzYzLjg2IDgyNi4yNSAxMzQ5LjczIDgzMS45OCAxMzQ5LjczIDgzMS45OCAxMzA4Ljg4IDg2OC4yNCAxMzA4Ljg4IDg3MS4yNCAxMzIzLjQyIDg0Ny40NyAxMzIzLjQyIDg0Ny40NyAxMzQ5Ljg2IDg3My4zNCAxMzQ5Ljg2IDg3My4zNCAxMzYzLjg2IDg0Ny40NyAxMzYzLjg2IDg0Ny40NyAxMzg2LjA5IDg3MS4xNyAxMzg2LjA5IDg3MS4xNyAxNDAwLjM2IDgzMS45OCAxNDAwLjM2Ii8+PHBhdGggZD0iTTk4MSwxNDAyLjRjLTI2LjUsMC00Ni40OS0yMC00Ni40OS00Ni40OHMyMS42LTQ5LjA4LDQ3LjE3LTQ5LjA4YTY1LjI3LDY1LjI3LDAsMCwxLDIwLjY4LDRsLjI4LjExLTQuMjcsMTQuNTMtLjM0LS4xNGE0Niw0NiwwLDAsMC0xNi43NS0zLjY1Yy0xNy4yMywwLTMwLjczLDE0Ljc1LTMwLjczLDMzLjU4LDAsMTguNDUsMTMuNTYsMzIuODksMzAuODYsMzIuODksNi4yNSwwLDEyLjA4LTEuODQsMTguMzUtNS43OWwuMzYtLjIzLDQuNDMsMTQtLjI1LjEyQzk5NS44LDE0MDAuNjEsOTg5LjA1LDE0MDIuNCw5ODEsMTQwMi40WiIvPjxyZWN0IHg9IjEwNzMuOTQiIHk9IjEzMDguODgiIHdpZHRoPSIxNS4yMiIgaGVpZ2h0PSI5MS40NyIvPjxwYXRoIGQ9Ik0xMTk3LjIyLDE0MDIuNTRjLTI2LjM4LDAtNDctMjEuMjYtNDctNDguNCwwLTExLjk0LDQuOTQtMjQuMTQsMTMuNTYtMzMuNDUsOC4zNC05LDIxLTE0LjQsMzQtMTQuNGE0OC4zMiw0OC4zMiwwLDAsMSw0OC40LDQ4LjEyLDQ5LjQxLDQ5LjQxLDAsMCwxLTE1LjQ5LDM1LjIzQzEyMjEuODMsMTM5OC4wOCwxMjEwLjI2LDE0MDIuNTQsMTE5Ny4yMiwxNDAyLjU0Wm0xLTgxLjNjLTE3LjY4LDAtMzEuNTQsMTQuNTctMzEuNTQsMzMuMTcsMCwxMC43NSwzLjQ5LDE5LDEwLjY1LDI1LjIzYTMxLjg2LDMxLjg2LDAsMCwwLDIwLjc2LDcuOTVjMTgsMCwzMS41My0xNC4xNSwzMS41My0zMi45MVMxMjE1Ljc4LDEzMjEuMjQsMTE5OC4xNywxMzIxLjI0WiIvPjwvc3ZnPg==');
+width: 512px;
+margin: 0 auto;
+}
+
+.social-icons {
+    margin: 0 auto 0 auto;
+    width: 695px;
+}
+
+.svg-inline--fa {
+    margin: 5%;
+    padding: 2px;
+    color: #333;
+}
+
+.social-icons i:hover {
+    color: #000;
+}
+
+.description {
+    font-family: "Merriweather", serif;
+    font-size: 1.8rem;
+    line-height: 1.5em;
+    font-weight: 300;
+    letter-spacing: 0;
+}
+
+
+
+@media only screen and (max-width: 1130px) {
+#logotype {
+    width: 384px;
+}
+.social-icons {
+    width: 600px;
+}
+.svg-inline--fa {
+    margin: 3.5%;
+}
+.fa-3x {
+    font-size: 3em;
+}
+}
+
+@media only screen and (max-width: 900px) {
+#logotype {
+    width: 300px;
+}
+.social-icons {
+    width: 425px;
+}
+.svg-inline--fa {
+    margin: 3.5%;
+}
+.fa-3x {
+    font-size: 2.5em;
+}
+}
+
+
+@media only screen and (max-width: 500px) {
+#logotype {
+    width: 256px;
+}
+.social-icons {
+    width: 400x;
+}
+.svg-inline--fa {
+    margin: 2%;
+}
+.fa-3x {
+    font-size: 2em;
+}
+}
+
+
+@media only screen and (max-width: 400px) {
+
+#logotype {
+    width: 200px;
+}
+.social-icons {
+    width: 350px;
+}
+.svg-inline--fa {
+    margin: 2%;
+}
+.fa-3x {
+    font-size: 2em;
+}
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape){
+#logotype {
+    width: 384px;
+}
+.social-icons {
+    width: 600px;
+}
+.svg-inline--fa {
+    margin: 3.5%;
+}
+.fa-3x {
+    font-size: 3em;
+}
+}
